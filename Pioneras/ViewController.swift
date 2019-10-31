@@ -18,6 +18,27 @@ class ViewController: UIViewController {
     @IBAction func retornoDeSecundaria(segue: UIStoryboardSegue) {
         
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //obtenemos el controller destino y forzamos la conversión al tipo adecuado
+        let controller = segue.destination as! SecundarioViewController
+        //fijamosla propiedad "nomFich" al identificador del segue
+        if(segue.identifier == "lovelace") {
+            controller.nomFich = segue.identifier
+        }
+        
+        if(segue.identifier == "hopper") {
+            controller.nomFich = segue.identifier
+        }
+        
+        if(segue.identifier == "liskov") {
+            controller.nomFich = segue.identifier
+        }
+        
+        
+        
+    }
 
 
 }
