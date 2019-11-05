@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,32 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k11-zT-VZ7">
-                                <rect key="frame" x="51" y="339" width="313" height="202"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="hopper"/>
-                                <connections>
-                                    <segue destination="TVJ-Cg-BKd" kind="presentation" identifier="hopper" id="ocZ-J5-pIA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-K7-NZQ">
-                                <rect key="frame" x="51" y="102" width="313" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="lovelace"/>
-                                <connections>
-                                    <segue destination="TVJ-Cg-BKd" kind="presentation" identifier="lovelace" id="VEt-Dh-uDI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esB-7E-3TM">
-                                <rect key="frame" x="51" y="571" width="313" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="liskov"/>
-                                <connections>
-                                    <segue destination="TVJ-Cg-BKd" kind="presentation" identifier="liskov" id="cNK-98-Dap"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lfA-he-t13">
+                                <rect key="frame" x="18" y="62" width="378" height="816"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-K7-NZQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="266.66666666666669"/>
+                                        <state key="normal" backgroundImage="lovelace"/>
+                                        <connections>
+                                            <segue destination="TVJ-Cg-BKd" kind="presentation" identifier="lovelace" id="VEt-Dh-uDI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k11-zT-VZ7">
+                                        <rect key="frame" x="0.0" y="274.66666666666663" width="378" height="266.66666666666663"/>
+                                        <state key="normal" backgroundImage="hopper"/>
+                                        <connections>
+                                            <segue destination="TVJ-Cg-BKd" kind="presentation" identifier="hopper" id="ocZ-J5-pIA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esB-7E-3TM">
+                                        <rect key="frame" x="0.0" y="549.33333333333337" width="378" height="266.66666666666663"/>
+                                        <state key="normal" backgroundImage="liskov"/>
+                                        <connections>
+                                            <segue destination="TVJ-Cg-BKd" kind="presentation" identifier="liskov" id="cNK-98-Dap"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lfA-he-t13" secondAttribute="trailing" constant="18" id="5j6-Pv-LJ0"/>
+                            <constraint firstItem="lfA-he-t13" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="ZVi-yf-qSE"/>
+                            <constraint firstAttribute="bottom" secondItem="lfA-he-t13" secondAttribute="bottom" constant="18" id="dyz-k4-jSB"/>
+                            <constraint firstItem="lfA-he-t13" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="kJk-NW-1eA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
